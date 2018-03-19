@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/menuDashBoardNavBarDashBoard"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/dashboard" />
+        <item
+            android:id="@+id/menuDashBoardNavBarGovYojanas"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/government_yojanas" />
+        <item
+            android:id="@+id/menuDashBoardNavBarBankServices"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/banks_services" />
+        <item
+            android:id="@+id/menuDashBoardNavBarDigitalBonofied"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/digital_bonofied" />
+
+        <item
+            android:id="@+id/menuDashBoardNavBarPaymentsCircular"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/payment_circular" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/menuDashBoardNavBarNotification"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/notification" />
+            <item
+                android:id="@+id/menuDashBoardNavBarOtherApps"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/other_apps" />
+        </menu>
+    </item>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/menuDashBoardNavBarLocateKiosk"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/locate_kiosk" />
+            <item
+                android:id="@+id/menuDashBoardNavBarContactUs"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/contact_us" />
+            <item
+                android:id="@+id/menuDashBoardNavBarFaq"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/faqs" />
+            <item
+                android:id="@+id/menuDashBoardNavBarFeedBack"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/feedback" />
+            <item
+                android:id="@+id/menuDashBoardNavBarSetting"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/setting" />
+        </menu>
+    </item>
+</menu>
