@@ -83,11 +83,6 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
             case R.id.btSignInSignIn:
                 login();
                 break;
-            case R.id.btSignInFacebook:
-                break;
-            case R.id.btSignInGooglePlus:
-//                signIn();
-                break;
         }
     }
 
