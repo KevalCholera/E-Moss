@@ -28,9 +28,25 @@
             android:gravity="center_vertical"
             android:orientation="vertical">
 
+            <EditText
+                android:id="@+id/etSignUpUserName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp30"
+                android:background="@drawable/grayborder"
+                android:hint="@string/user_name"
+                android:imeOptions="actionNext"
+                android:paddingLeft="@dimen/dp10"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/generalTextSizeSmall" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
                 android:orientation="horizontal">
 
                 <EditText

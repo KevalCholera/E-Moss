@@ -78,7 +78,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
                 public void run() {
                     startActivity(new Intent(DashBoard.this, KioskCenter.class));
                 }
-            }, 1000);
+            }, 500);
         } else if (id == R.id.menuDashBoardNavBarContactUs) {
             fragment = new FragmentContactUs();
             getSupportActionBar().setTitle("Contact Us");

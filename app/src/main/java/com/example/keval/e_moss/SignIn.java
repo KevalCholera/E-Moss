@@ -8,12 +8,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.keval.e_moss.Utils.CommonUtils;
+import com.example.keval.e_moss.Utils.Constants;
+import com.mpt.storage.SharedPreferenceUtil;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class SignIn extends AppCompatActivity implements View.OnClickListener {
 
     Button btSignInSignUp, btSignInSignIn;
     EditText etSignInUserName, etSignInPassword;
+    JSONArray arrayAllUserData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,25 +34,54 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         btSignInSignUp.setOnClickListener(this);
         btSignInSignIn.setOnClickListener(this);
 
+        arrayAllUserData = new JSONArray();
+
+        try {
+            if (!SharedPreferenceUtil.getString(Constants.USER_DETAILS, "").equalsIgnoreCase(""))
+                arrayAllUserData = new JSONArray(SharedPreferenceUtil.getString(Constants.USER_DETAILS, ""));
+            else
+                arrayAllUserData = new JSONArray();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void login() {
+
+        if (etSignInUserName.getText().toString().trim().equalsIgnoreCase(""))
+            Toast.makeText(this, "Enter UserName", Toast.LENGTH_SHORT).show();
+        else if (etSignInPassword.getText().toString().trim().equalsIgnoreCase(""))
+            Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
+        else {
+
+            if (arrayAllUserData.length() != 0)
+                for (int i = 0; i <= arrayAllUserData.length() - 1; i++) {
+                    JSONObject objectAllUserData = arrayAllUserData.optJSONObject(i);
+
+                    if (!etSignInUserName.getText().toString().trim().equalsIgnoreCase(objectAllUserData.optString("userName"))
+                            || !etSignInPassword.getText().toString().trim().equalsIgnoreCase(objectAllUserData.optString("password"))) {
+                        Toast.makeText(this, "Wrong Credential", Toast.LENGTH_SHORT).show();
+                        break;
+                    } else {
+                        startActivity(new Intent(this, DashBoard.class));
+                        Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        break;
+                    }
+                }
+            else
+                Toast.makeText(this, "Wrong Credential", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btSignInSignUp:
-
                 startActivity(new Intent(SignIn.this, SignUp.class));
                 break;
             case R.id.btSignInSignIn:
-
-                if (etSignInUserName.getText().toString().trim().equalsIgnoreCase(""))
-                    Toast.makeText(this, "Enter UserName", Toast.LENGTH_SHORT).show();
-                else if (etSignInPassword.getText().toString().trim().equalsIgnoreCase(""))
-                    Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
-                else if (!CommonUtils.isLegalPassword(etSignInPassword.getText().toString().trim()))
-                    Toast.makeText(this, "Password is not supported", Toast.LENGTH_SHORT).show();
-                else
-                    startActivity(new Intent(SignIn.this, DashBoard.class));
+                login();
                 break;
             case R.id.btSignInFacebook:
                 break;
