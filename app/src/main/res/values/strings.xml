@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Roommate Sihab</string>
+    <string name="app_name">E-MOSS</string>
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
@@ -45,4 +45,6 @@
     <string name="government_events">Government Events</string>
     <string name="government_center_n_near_by">Government Center \n near by</string>
     <string name="success">Success</string>
+    <string name="offline">offline</string>
+    <string name="go_online">Go online</string>
 </resources>

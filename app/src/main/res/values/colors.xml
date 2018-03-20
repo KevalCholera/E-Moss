@@ -50,4 +50,7 @@
     <color name="line_color3">#e2e2e2</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="transparent_blue">#9955C5FF</color>
+    <color name="colorBackground">#136FA8</color>
 </resources>

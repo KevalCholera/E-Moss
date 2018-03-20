@@ -5,6 +5,9 @@ import android.app.ProgressDialog;
 import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
+import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -21,6 +24,7 @@ import com.example.keval.e_moss.R;
 import com.mpt.storage.SharedPreferenceUtil;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.text.ParseException;
@@ -31,12 +35,44 @@ import java.util.regex.Pattern;
 
 public class CommonUtils {
     private static ProgressDialog pDialog;
+    public static int selectedStatus;
+    public static JSONObject curruntWorkObj;
 
     public static void showProgressDialog(Context activity, String msg) {
         pDialog = new ProgressDialog(activity);
         pDialog.setMessage(msg);
         pDialog.setCancelable(true);
         pDialog.show();
+    }
+
+
+    public static JSONObject getCurruntWorkObj() {
+        return curruntWorkObj;
+    }
+
+    public static void setCurruntWorkObj(JSONObject curruntWorkObj) {
+        curruntWorkObj = curruntWorkObj;
+    }
+
+    public static boolean isGPS(Context context) {
+
+        final LocationManager manager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+
+        if (manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isInternetAvailable(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo activeNetwork = connectivity.getActiveNetworkInfo();
+            return activeNetwork != null && activeNetwork.isConnected();
+        }
+        return false;
+
     }
 
     public static void cancelProgressDialog() {

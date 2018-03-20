@@ -3,7 +3,9 @@
     package="com.example.keval.e_moss">
 
     <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -12,11 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".AppSplash">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".SignIn"
@@ -36,6 +40,25 @@
             android:name=".DashBoard"
             android:label="@string/title_activity_dash_board"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDUK5t4A6SKV-aaRP1TygTREj902r_DbD0" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="MAP"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
+
+        </activity>
+
     </application>
 
 </manifest>
