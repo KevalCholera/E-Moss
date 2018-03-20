@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">E-MOSS</string>
+    <string name="google_key">AIzaSyDUK5t4A6SKV-aaRP1TygTREj902r_DbD0</string>
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
@@ -47,4 +48,13 @@
     <string name="success">Success</string>
     <string name="offline">offline</string>
     <string name="go_online">Go online</string>
+    <string name="subscribe_service">Subscribe Service</string>
+    <string name="kiosk_center">KIOSK center</string>
+    <string name="app_info">App Info</string>
+    <string name="share_this_app">Share this App</string>
+    <string name="rate_this_app">Rate this App</string>
+    <string name="more_apps">More Apps</string>
+    <string name="log_in_with">log in with...</string>
+    <string name="by_singing_in_you_agree_to_terms_and_conditions_and_also_privacy_policy">by singing in you agree to terms and conditions and also Privacy policy...</string>
+    <string name="don_t_you_have_account_yet_signup_here">Don\'t you have account yet? SignUp here...</string>
 </resources>

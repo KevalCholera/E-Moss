@@ -44,6 +44,7 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
     private void displaySelectedScreen(int id) {
 
         Fragment fragment = null;
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         if (id == R.id.menuDashBoardNavBarDashBoard) {
             fragment = new FragmentDashboard();
@@ -61,10 +62,24 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             fragment = new FragmentDashboard();
             getSupportActionBar().setTitle("Digital Bonofied");
 
+        } else if (id == R.id.menuDashBoardNavBarSubscribeService) {
+            fragment = new FragmentDashboard();
+            getSupportActionBar().setTitle("Subscribe Service");
+
         } else if (id == R.id.menuDashBoardNavBarPaymentsCircular) {
             fragment = new FragmentDashboard();
             getSupportActionBar().setTitle("Payment Circular");
 
+        } else if (id == R.id.menuDashBoardNavBarKioskCenter) {
+
+            Handler handler = new Handler();
+            drawer.closeDrawer(GravityCompat.START);
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(new Intent(DashBoard.this, KioskCenter.class));
+                }
+            }, 1000);
         }
 
         if (fragment != null) {
@@ -73,7 +88,6 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
             ft.commit();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
 

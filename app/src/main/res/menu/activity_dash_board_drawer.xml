@@ -20,6 +20,11 @@
             android:title="@string/digital_bonofied" />
 
         <item
+            android:id="@+id/menuDashBoardNavBarSubscribeService"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/subscribe_service" />
+
+        <item
             android:id="@+id/menuDashBoardNavBarPaymentsCircular"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/payment_circular" />
@@ -28,37 +33,33 @@
     <item android:title="">
         <menu>
             <item
-                android:id="@+id/menuDashBoardNavBarNotification"
+                android:id="@+id/menuDashBoardNavBarKioskCenter"
                 android:icon="@drawable/ic_menu_share"
-                android:title="@string/notification" />
+                android:title="@string/kiosk_center" />
             <item
-                android:id="@+id/menuDashBoardNavBarOtherApps"
+                android:id="@+id/menuDashBoardNavBarContactUs"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/other_apps" />
+                android:title="@string/contact_us" />
         </menu>
     </item>
     <item android:title="">
         <menu>
             <item
-                android:id="@+id/menuDashBoardNavBarLocateKiosk"
+                android:id="@+id/menuDashBoardNavBarAppInfo"
                 android:icon="@drawable/ic_menu_share"
-                android:title="@string/locate_kiosk" />
+                android:title="@string/app_info" />
             <item
-                android:id="@+id/menuDashBoardNavBarContactUs"
+                android:id="@+id/menuDashBoardNavBarShareApp"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/contact_us" />
+                android:title="@string/share_this_app" />
             <item
-                android:id="@+id/menuDashBoardNavBarFaq"
+                android:id="@+id/menuDashBoardNavBarRateApp"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/faqs" />
+                android:title="@string/rate_this_app" />
             <item
-                android:id="@+id/menuDashBoardNavBarFeedBack"
+                android:id="@+id/menuDashBoardNavBarMoreApp"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/feedback" />
-            <item
-                android:id="@+id/menuDashBoardNavBarSetting"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/setting" />
+                android:title="@string/more_apps" />
         </menu>
     </item>
 </menu>
