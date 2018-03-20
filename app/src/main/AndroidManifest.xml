@@ -56,7 +56,10 @@
             <!-- </intent-filter> -->
 
         </activity>
-        <activity android:name=".KioskCenter" />
+        <activity
+            android:name=".KioskCenter"
+            android:label="Kiosk Center"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

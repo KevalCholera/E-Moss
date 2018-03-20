@@ -40,7 +40,6 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
         displaySelectedScreen(R.id.menuDashBoardNavBarDashBoard);
     }
 
-
     private void displaySelectedScreen(int id) {
 
         Fragment fragment = null;
@@ -80,6 +79,9 @@ public class DashBoard extends AppCompatActivity implements NavigationView.OnNav
                     startActivity(new Intent(DashBoard.this, KioskCenter.class));
                 }
             }, 1000);
+        } else if (id == R.id.menuDashBoardNavBarContactUs) {
+            fragment = new FragmentContactUs();
+            getSupportActionBar().setTitle("Contact Us");
         }
 
         if (fragment != null) {

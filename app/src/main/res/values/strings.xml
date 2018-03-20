@@ -57,4 +57,12 @@
     <string name="log_in_with">log in with...</string>
     <string name="by_singing_in_you_agree_to_terms_and_conditions_and_also_privacy_policy">by singing in you agree to terms and conditions and also Privacy policy...</string>
     <string name="don_t_you_have_account_yet_signup_here">Don\'t you have account yet? SignUp here...</string>
+    <string name="all_data">All Data</string>
+    <string name="enter_contact_no">Enter Contact No.</string>
+    <string name="subject">Subject</string>
+    <string name="enter_email_id_">Enter Email Id</string>
+    <string name="subject_">Subject</string>
+    <string name="enter_sub">Enter Subject</string>
+    <string name="message_">Message</string>
+    <string name="submit">Submit</string>
 </resources>

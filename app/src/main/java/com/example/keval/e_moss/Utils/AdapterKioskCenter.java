@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.keval.e_moss.MapsActivity;
@@ -51,10 +52,11 @@ public class AdapterKioskCenter extends BaseAdapter {
         TextView tvKioskCenterMobile = (TextView) vi.findViewById(R.id.tvKioskCenterMobile);
         TextView tvKioskCenterEmail = (TextView) vi.findViewById(R.id.tvKioskCenterEmail);
         TextView tvKioskCenterCategory = (TextView) vi.findViewById(R.id.tvKioskCenterCategory);
+        LinearLayout llElementKioskCenter = (LinearLayout) vi.findViewById(R.id.llElementKioskCenter);
 
         tvKioskCenterName.setText(jsonObject.optString("userName"));
         tvKioskCenterAddress.setText(jsonObject.optString("userAdd"));
-        tvKioskCenterMobile.setText(jsonObject.optString("userMobile"));
+        tvKioskCenterMobile.setText(jsonObject.optString("userNumber"));
         tvKioskCenterEmail.setText(jsonObject.optString("userEmail"));
         tvKioskCenterCategory.setText(jsonObject.optString("userCategory"));
 
