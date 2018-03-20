@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/user_name"
-                android:textColor="@color/background" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/etContactUsName"
@@ -45,8 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
                 android:text="@string/contact_us"
-                android:textColor="@color/background" />
-
+                android:textColor="@color/black" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -93,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
                 android:text="@string/email"
-                android:textColor="@color/background" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/etContactUsEmail"
@@ -114,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
                 android:text="@string/subject_"
-                android:textColor="@color/background" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/etContactUsSubject"
@@ -135,16 +134,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10"
                 android:text="@string/message_"
-                android:textColor="@color/background" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/etContactUsMessage"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp35"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp5"
                 android:background="@drawable/grayborder"
                 android:gravity="top"
                 android:maxLength="200"
+                android:minHeight="200dp"
                 android:padding="@dimen/dp10"
                 android:textColor="@color/black"
                 android:textSize="@dimen/generalTextSizeSmall" />

@@ -184,13 +184,10 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
+            <com.google.android.gms.common.SignInButton
                 android:id="@+id/btSignInGooglePlus"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp37"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:src="@mipmap/google_plus" />
+                android:layout_height="match_parent" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -223,9 +220,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp20"
+            android:gravity="center"
             android:text="@string/don_t_you_have_account_yet_signup_here"
             android:textColor="@color/black"
-            android:gravity="center"
             android:textStyle="bold"
             android:visibility="visible" />
 

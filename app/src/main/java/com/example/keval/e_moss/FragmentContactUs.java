@@ -20,7 +20,7 @@ public class FragmentContactUs extends Fragment implements View.OnClickListener 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
         etContactUsName = (EditText) view.findViewById(R.id.etContactUsName);
         etContactUsMobile = (EditText) view.findViewById(R.id.etContactUsMobile);
@@ -29,6 +29,7 @@ public class FragmentContactUs extends Fragment implements View.OnClickListener 
         etContactUsMessage = (EditText) view.findViewById(R.id.etContactUsMessage);
         btContactSubmit = (Button) view.findViewById(R.id.btContactSubmit);
 
+        btContactSubmit.setOnClickListener(this);
 
         return view;
     }

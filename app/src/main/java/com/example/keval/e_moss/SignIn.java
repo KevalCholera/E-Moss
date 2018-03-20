@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,7 +14,6 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
 
     Button btSignInSignUp, btSignInSignIn;
     EditText etSignInUserName, etSignInPassword;
-    CheckBox cbSignInAgreement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +24,6 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         btSignInSignIn = (Button) findViewById(R.id.btSignInSignIn);
         etSignInUserName = (EditText) findViewById(R.id.etSignInUserName);
         etSignInPassword = (EditText) findViewById(R.id.etSignInPassword);
-        cbSignInAgreement = (CheckBox) findViewById(R.id.cbSignInAgreement);
 
         btSignInSignUp.setOnClickListener(this);
         btSignInSignIn.setOnClickListener(this);
@@ -42,16 +39,19 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.btSignInSignIn:
 
-                if (etSignInUserName.getText().toString().trim() == null || etSignInUserName.getText().toString().trim().equalsIgnoreCase(""))
+                if (etSignInUserName.getText().toString().trim().equalsIgnoreCase(""))
                     Toast.makeText(this, "Enter UserName", Toast.LENGTH_SHORT).show();
-                else if (etSignInPassword.getText().toString().trim() == null || etSignInPassword.getText().toString().trim().equalsIgnoreCase(""))
+                else if (etSignInPassword.getText().toString().trim().equalsIgnoreCase(""))
                     Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
                 else if (!CommonUtils.isLegalPassword(etSignInPassword.getText().toString().trim()))
                     Toast.makeText(this, "Password is not supported", Toast.LENGTH_SHORT).show();
-//                else if (!cbSignInAgreement.isChecked())
-//                    Toast.makeText(this, "Please Agree our ", Toast.LENGTH_SHORT).show();
                 else
-                startActivity(new Intent(SignIn.this, DashBoard.class));
+                    startActivity(new Intent(SignIn.this, DashBoard.class));
+                break;
+            case R.id.btSignInFacebook:
+                break;
+            case R.id.btSignInGooglePlus:
+//                signIn();
                 break;
         }
     }
